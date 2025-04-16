@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .madeby {
+        /* 텍스트 아래 고정 */
+        /* position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: white; */
+        color: black;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="yudong">유동선</h1>
+    <img src="img.png" alt="유동선을 찾았나요?" />
+    <h2>#SPREAD유동선</h2>
+    <p class="madeby">Made by Yeojun</p>
+
+    <script>
+      setInterval(function () {
+        document.querySelector(".yudong").style.color =
+          "#" + Math.round(Math.random() * 0xffffff).toString(16);
+      }, 1000);
+    </script>
+  </body>
+</html>
