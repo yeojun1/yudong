@@ -34,13 +34,22 @@
         font-size: 1.5em;
         margin-top: 50px;
       }
+
+      .image-stack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* 이미지 간 여백 */
+      }
     </style>
     <title>#SPREAD유동선</title>
   </head>
   <body>
     <h1 class="yudong">유동선</h1>
-    <img src="img.png" alt="유동선을 찾았나요?" />
-    <img src="yudong.jpg" alt="오늘의 단어" width="500" height="500" />
+    <div class="image-stack">
+      <img src="img.png" alt="유동선을 찾았나요?" />
+      <img src="yudong.jpg" alt="오늘의 단어" width="500" height="500" />
+    </div>
     <h2 class="hashtag">#SPREAD유동선</h2>
     <p class="madeby">Made by Yeojun</p>
 
@@ -48,7 +57,7 @@
       setInterval(function () {
         document.querySelector(".yudong").style.color =
           "#" + Math.round(Math.random() * 0xffffff).toString(16);
-      }, 1000);
+      }, 500);
     </script>
   </body>
 </html>
